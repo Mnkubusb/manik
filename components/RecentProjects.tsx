@@ -12,13 +12,13 @@ const RecentProjects = () => {
         </h1>
         <div className='flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10'>
             {projects.map(({ id , title , des , img , iconLists , link }) =>(
-                <div key={id} className=' sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex justify-center items-center sm:w-[570px] w-[80vw]'>
+                <div key={id} className=' sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex justify-center items-center sm:w-[520px] w-[80vw]'>
                     <PinContainer title={"Visit"} href={link} >
-                        <div className='relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden h-[30vh] sm:h-[40vh] mb-10' >
-                            <div className='relative w-full h-full lg:rounded-3xl overflow-hidden bg-[#13162d] '>
+                        <div className='relative flex items-center justify-center sm:w-[520px] w-[80vw] overflow-hidden h-[30vh] sm:h-[40vh] mb-10' >
+                            <div className='relative w-full h-full rounded-3xl overflow-hidden bg-[#13162d] '>
                                 <img src="./bg.png" alt="bgimg" />
                             </div>
-                            <img src={img} alt={title} className='z-10 w-[90%] h-[90%] absolute bottom-0' />
+                            <img src={img} alt={title} className='z-10 w-[95%] h-[95%] absolute bottom-0' />
                         </div>
                         <h1 className='font-bold lg:text-2xl md:text-xl text-base line-clamp-1'>
                             {title}
