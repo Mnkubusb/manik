@@ -72,8 +72,8 @@ export const navItems = [
   export const projects = [
     {
       id: 1,
-      title: "Real-Time Google Docs Clone!",
-      des: "This project is a Google Docs clone that enables real-time collaborative editing, built using Next.js, TipTap Editor, Liveblocks, and Convex. The application allows multiple users to edit a document simultaneously while ensuring seamless synchronization across devices.",
+      title: "Flow Docs",
+      des: "This project enables real-time collaborative editing, built using Next.js, TipTap Editor, Liveblocks, and Convex. The application allows multiple users to edit a document simultaneously while ensuring seamless synchronization across devices.",
       img: "/p1.svg",
       iconLists: ["/re.svg", "/tail.svg", "/ts.svg" , "/next.svg"],
       link: "https://github.com/Mnkubusb/docs",
