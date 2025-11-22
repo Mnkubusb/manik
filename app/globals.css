@@ -15,7 +15,7 @@ body {
 @theme {
   --font-geist: "Geist", sans-serif;
   --font-geist-mono: "Geist Mono", monospace;
-  --font-roboto: "Roboto", monospace;
+  --font-roboto: "Roboto Mono", monospace;
   --font-georama: "Georama", sans-serif;
   --breakpoint-3xl: 1920px;
 }
