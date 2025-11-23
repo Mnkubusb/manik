@@ -1,10 +1,10 @@
 "use client"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
-import { ReactEventHandler, useRef } from "react"
+import { useRef } from "react"
 
 const FONT_WEIGHTS = {
-  subtitle: { min: 100, max: 900, default: 100 },
+  subtitle: { min: 100, max: 500, default: 100 },
   title: {
     min: 400,
     max: 900,
@@ -21,7 +21,7 @@ const renderTexts = ({ text, className, baseWeight = 100 }: { text: string, clas
       style={{
         fontVariationSettings: `'wght' ${baseWeight}`,
         fontStyle: className?.includes('italic') ? "italic" : "normal",
-        fontWeight: baseWeight
+        fontWeight: 'normal'
       }}
     >
 
@@ -48,7 +48,7 @@ const setupTextHover = (container: HTMLElement | null, type: string) => {
       duration,
       ease: "power2.out",
       onUpdate: () => {
-        letter.style.fontVariationSettings = `'wght' ${proxy.w} 'opsz' 9`;
+        letter.style.fontVariationSettings = `'wght' ${proxy.w}`;
         letter.style.fontWeight = `${proxy.w}`;
       }
     });
