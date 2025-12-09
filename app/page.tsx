@@ -1,5 +1,6 @@
+"use client"
 import { Dock, Navbar , Welcome} from "@/components";
-import { Terminal } from "@/windows";
+import { Finder, Resume, Safari, Terminal } from "@/windows";
 
 
 
@@ -10,6 +11,9 @@ export default function Home() {
       <Welcome />
       <Dock />
       <Terminal />
+      <Safari />
+      <Finder />
+      <Resume />
     </main>
   );
 }
