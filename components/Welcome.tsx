@@ -32,7 +32,7 @@ const renderTexts = ({ text, className, baseWeight = 100 }: { text: string, clas
 
 const setupTextHover = (container: HTMLElement | null, type: string) => {
 
-  if (!container) return () => {};
+  if (!container) return () => { };
 
   const letters = container.querySelectorAll("span");
   const { min, max, default: base } = FONT_WEIGHTS[type as keyof typeof FONT_WEIGHTS];
@@ -55,7 +55,7 @@ const setupTextHover = (container: HTMLElement | null, type: string) => {
   };
 
 
-  const handleMouseMove = (e: any) => {
+  const handleMouseMove = (e: MouseEvent) => {
     const { left } = container.getBoundingClientRect();
     const mouseX = e.clientX - left;
 
@@ -81,7 +81,7 @@ const setupTextHover = (container: HTMLElement | null, type: string) => {
   }
 }
 
-const Welcome = () => {
+export const Welcome = () => {
 
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
@@ -112,4 +112,3 @@ const Welcome = () => {
   )
 }
 
-export default Welcome

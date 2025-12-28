@@ -4,8 +4,7 @@ import { immer } from "zustand/middleware/immer";
 
 const DEFAULT_LOCATION = locations.work;
 
-type Location = typeof DEFAULT_LOCATION;
-
+export type Location = typeof DEFAULT_LOCATION;
 interface LocationState {
     activeLocation: Location;
 }

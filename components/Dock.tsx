@@ -7,7 +7,7 @@ import Image from "next/image";
 import { useRef } from "react";
 import { Tooltip } from 'react-tooltip'
 
-const Dock = () => {
+export const Dock = () => {
     const dockRef = useRef<HTMLDivElement>(null);
     const { openWindow, closeWindow, windows } = useWindowStore();
     useGSAP(() => {
@@ -97,4 +97,3 @@ const Dock = () => {
     )
 }
 
-export default Dock
