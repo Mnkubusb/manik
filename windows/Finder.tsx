@@ -12,7 +12,20 @@ const Finder = () => {
             <Search className='icon' />
         </div>
         <div className='bg-white flex h-full'>
-            
+            <div className='sidebar'>
+              <div>
+                <h3>Favorites</h3>
+                <ul>
+
+                </ul>
+              </div>
+              <div>
+                <h3>Work</h3>
+                <ul>
+
+                </ul>
+              </div>
+            </div>
         </div>
     </>
   )
