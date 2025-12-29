@@ -12,6 +12,7 @@ import {
 import { cn } from "@/lib/utils"
 import { AnimatedThemeToggler } from "./animated-theme-toggler"
 import { flushSync } from "react-dom"
+import { PopoverAnchor } from "@radix-ui/react-popover"
 
 export default function ThemePopover({ img }: { img: string }) {
     const [isDark, setIsDark] = useState(false)
@@ -80,8 +81,9 @@ export default function ThemePopover({ img }: { img: string }) {
                 // sideOffset={10}
                 className="
           w-44 p-1 rounded-[10px]
-          bg-[#F0F0F08A] text-[#262626] dark:bg-[#F0F0F08A] 
-          border
+          z
+          bg-[#F0F0F08A] text-[#262626] 
+          border 
         "
                 style={{
                     backdropFilter: "blur(80px)",

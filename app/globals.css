@@ -83,6 +83,7 @@
   --sidebar-ring: oklch(0.708 0 0);
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
+  --arrow:#a3d5e0;
 }
 
 .dark {
@@ -117,6 +118,7 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  --arrow: #96a4da;
 }
 
 @layer base {
@@ -133,12 +135,20 @@
     mix-blend-mode: normal;
 }
 
+html {
+  --wallpaper: url("/images/wallpaper-light.png");
+}
+
+html.dark {
+  --wallpaper: url("/images/wallpaper-dark.png");
+}
+
 html,
 body {
   width: 100dvw;
   overflow: hidden;
   height: 100dvh;
-  background: url("/images/wallpaper.png");
+  background: var(--wallpaper);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -207,7 +217,7 @@ body {
     @apply absolute bottom-5 left-1/2 -translate-x-1/2 z-50 select-none max-sm:hidden;
 
     .dock-container {
-      @apply bg-white/20 backdrop-blur-md justify-between rounded-2xl p-1.5 flex items-end gap-1.5;
+      @apply bg-white/20 dark:bg-[#FFFFFF1A] backdrop-blur-md justify-between rounded-2xl p-1.5 flex items-end gap-1.5;
     }
 
     .tooltip {
@@ -240,14 +250,14 @@ body {
   }
 
   #window-header {
-    @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-gray-50 border-b border-gray-200 select-none text-sm text-gray-400;
+    @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-gray-50 dark:bg-[#1E1E1ED9] border-b border-gray-200 select-none text-sm text-gray-400;
   }
 
   #safari {
-    @apply w-4xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-4xl absolute top-40 dark:bg-[#1E1E1E] left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     .search {
-      @apply flex items-center gap-3 w-2/3 bg-white border border-gray-300 rounded-lg px-3 py-2;
+      @apply flex items-center gap-3 w-2/3 bg-white dark:bg-[#FFFFFF1A] border border-gray-300 rounded-lg px-3 py-2;
 
       input {
         @apply placeholder:text-gray-400;
@@ -255,10 +265,10 @@ body {
     }
 
     .blog {
-      @apply bg-white p-10 max-w-3xl mx-auto;
+      @apply bg-white dark:bg-[#1E1E1E]  p-10 max-w-3xl mx-auto;
 
       h2 {
-        @apply text-xl font-bold text-pink-600 mb-10;
+        @apply text-xl font-bold text-pink-600  mb-10;
       }
 
       .blog-post {
@@ -272,11 +282,11 @@ body {
           @apply col-span-10 space-y-3;
 
           p {
-            @apply text-xs text-gray-500;
+            @apply text-xs text-gray-500 dark:text-white;
           }
 
           h3 {
-            @apply font-semibold text-base text-gray-800;
+            @apply font-semibold text-base text-gray-800 dark:text-white;
           }
 
           a {
@@ -288,7 +298,7 @@ body {
   }
 
   #terminal {
-    @apply w-xl absolute top-32 left-1/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-xl absolute top-32 left-1/12 bg-white dark:bg-[#1E1E1E] shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
@@ -365,7 +375,7 @@ body {
     @apply max-w-3xl absolute top-96 left-1/2 -translate-y-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     .sidebar {
-      @apply w-3/12 flex-none bg-gray-50 border-r border-gray-200 flex flex-col p-5;
+      @apply w-3/12 flex-none bg-gray-50 dark:bg-[#323232F2] border-r border-gray-200 flex flex-col p-5;
 
       h2 {
         @apply text-xs font-medium text-gray-400 mb-1;
@@ -435,21 +445,21 @@ body {
     @apply absolute w-3xl left-40 top-20 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl;
 
     .sidebar {
-      @apply w-48 bg-gray-50 border-r border-gray-200 flex flex-col p-5 space-y-3;
+      @apply w-48 bg-gray-50 dark:bg-[#323232F2] border-r border-gray-200 flex flex-col p-5 space-y-3;
 
       h3 {
-        @apply text-xs font-medium text-gray-400 mb-1;
+        @apply text-xs font-medium text-gray-400 dark:text-white mb-1;
       }
 
       ul {
-        @apply space-y-1;
+        @apply space-y-1 ;
 
         .active {
           @apply bg-blue-100 text-blue-700;
         }
 
         .not-active {
-          @apply text-gray-700 hover:bg-gray-200;
+          @apply text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-700 dark:text-white;
         }
 
         li {
@@ -459,7 +469,7 @@ body {
     }
 
     .content {
-      @apply flex-1 p-8 bg-white max-w-2xl relative;
+      @apply flex-1 p-8 bg-white dark:bg-[#1E1E1E] max-w-2xl relative;
 
       li {
         @apply absolute flex items-center flex-col gap-3;
@@ -476,7 +486,7 @@ body {
   }
 
   #txtfile {
-    @apply w-md absolute top-36 right-32 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-md absolute top-36 right-32 bg-white dark:bg-[#1E1E1E] shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
@@ -484,7 +494,7 @@ body {
   }
 
   #imgfile {
-    @apply w-xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-xl absolute top-40 left-2/12 bg-white dark:bg-[#1E1E1E] shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     #window-header {
       p {
