@@ -143,7 +143,6 @@ html.dark {
   --wallpaper: url("/images/wallpaper-dark.png");
 }
 
-html,
 body {
   width: 100dvw;
   overflow: hidden;
