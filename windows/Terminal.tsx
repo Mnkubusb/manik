@@ -6,56 +6,56 @@ import { Check, Flag } from 'lucide-react';
 
 
 const Terminal = () => {
-  return (
-    <>
-        <div id='window-header'>
-            <WindowControls target="terminal" />
-            <h2>Tech Stack</h2>
-        </div>
-        <div className='techstack'>
-            <p>
-                <span className='font-bold'>m@nik # </span>
-                show tech stack
-            </p>
-            <div className='label'>
-                <p className='w-32'>
-                    Categories
-                </p>
-                <p>
-                    Technologies
-                </p>
+    return (
+        <>
+            <div id='window-header'>
+                <WindowControls target="terminal" />
+                <h2>Tech Stack</h2>
             </div>
-            <ul className='content'>
-                {techStack.map(({category , items}) => (
-                    <li key={category} className='flex items-center'>
-                        <Check className='check' size={20} />
-                        <h3>{category}</h3>
-                        <ul>
-                            {items.map((item , i) => (
-                                <li key={i}>
-                                   {item}
-                                   {i < items.length - 1 ? ",": ""}
-                                </li>
-                            ))}
-                        </ul>
-                    </li>
-                ))}
-            </ul>
-            <div className='footnote'>
+            <div className='techstack'>
                 <p>
-                  <Check size={20} />
-                  5 of 5 stack loaded successfully (100%) 
+                    <span className='font-bold'>m@nik # </span>
+                    show tech stack
                 </p>
-                <p className='text-black'>
-                    <Flag size={15} fill={"black"} />
-                    Render time : 6ms
-                </p>
+                <div className='label'>
+                    <p className='w-32'>
+                        Categories
+                    </p>
+                    <p>
+                        Technologies
+                    </p>
+                </div>
+                <ul className='content'>
+                    {techStack.map(({ category, items }) => (
+                        <li key={category} className='flex items-center'>
+                            <Check className='check' size={20} />
+                            <h3>{category}</h3>
+                            <ul>
+                                {items.map((item, i) => (
+                                    <li key={i}>
+                                        {item}
+                                        {i < items.length - 1 ? "," : ""}
+                                    </li>
+                                ))}
+                            </ul>
+                        </li>
+                    ))}
+                </ul>
+                <div className='footnote'>
+                    <p>
+                        <Check size={20} />
+                        5 of 5 stack loaded successfully (100%)
+                    </p>
+                    <p className='text-black dark:text-white'>
+                        <Flag size={15} fill={"black"} />
+                        Render time : 6ms
+                    </p>
+                </div>
             </div>
-        </div>
-    </>
-  )
+        </>
+    )
 }
 
-const TerminalWindow = WindowWrapper(Terminal , 'terminal');
+const TerminalWindow = WindowWrapper(Terminal, 'terminal');
 
 export default TerminalWindow;

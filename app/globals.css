@@ -250,7 +250,7 @@ body {
   }
 
   #window-header {
-    @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-gray-50 dark:bg-[#1E1E1ED9] border-b border-gray-200 select-none text-sm text-gray-400;
+    @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-gray-50 dark:bg-[#323232F2] border-b border-gray-200 dark:border-[#323232F2] select-none text-sm text-gray-400;
   }
 
   #safari {

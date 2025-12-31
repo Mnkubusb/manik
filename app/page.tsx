@@ -2,16 +2,16 @@
 import { Dock, Welcome, Navbar } from "@/components";
 import { Finder, Resume, Safari, Terminal, TextFile, ImageViewer } from "@/windows";
 import { useEffect, useState } from "react";
+import Loading from "./loading";
 
 export default function Home() {
-
-  const [mounted , setMounted] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setMounted(true)
-  },[])
+    setTimeout(() => setLoading(false), 3000)
+  }, [])
 
-  if(!mounted) return null;
+  if (loading) return <Loading />
 
   return (
     <main>
