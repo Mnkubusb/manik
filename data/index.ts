@@ -270,14 +270,20 @@ export const navItems = [
   export const socialMedia = [
     {
       id: 1,
+      name: "GitHub",
       img: "/git.svg",
+      link: "https://github.com/Mnkubusb",
     },
     {
       id: 2,
-      img: "/twit.svg",
+      name: "Instagram",
+      img: "/insta.svg",
+      link: "https://www.instagram.com/manik_chand_sahu/",
     },
     {
       id: 3,
+      name: "LinkedIn",
       img: "/link.svg",
+      link: "https://www.linkedin.com/in/manik-chand-sahu/",
     },
   ];
