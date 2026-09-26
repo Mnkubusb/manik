@@ -76,7 +76,7 @@ export const navItems = [
       des: "This project enables real-time collaborative editing, built using Next.js, TipTap Editor, Liveblocks, and Convex. The application allows multiple users to edit a document simultaneously while ensuring seamless synchronization across devices.",
       img: "/p1.svg",
       iconLists: ["/re.svg", "/tail.svg", "/ts.svg" , "/next.svg"],
-      link: "https://github.com/Mnkubusb/docs",
+      link: "https://docs-zeta-eight-56.vercel.app",
     },
     {
       id: 2,
@@ -84,7 +84,7 @@ export const navItems = [
       des: "College Connection is a web application designed to help college students connect with each other. It allows students to create profiles, view others' profiles, and reach out through social media links. Additionally, it provides a centralized space to access and share academic notes for all semesters.",
       img: "/p2.svg",
       iconLists: ["/next.svg", "/tail.svg", "/ts.svg",],
-      link: "https://github.com/Mnkubusb/docs",
+      link: "https://college-connection.vercel.app",
     },
     {
       id: 3,
@@ -92,10 +92,139 @@ export const navItems = [
       des: "This project is a pixel-perfect clone of the Awwwards-winning landing page of Zentry, a gaming company. Designed to replicate the stunning animations, smooth interactions, and immersive UI/UX, this project showcases high-quality frontend development and web animations.",
       img: "/p3.svg",
       iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/fm.svg" , "/next.svg"],
-      link: "https://github.com/Mnkubusb/awwwards_website",
+      link: "https://awwwards-website-phi.vercel.app",
+    },
+    {
+      id: 4,
+      title: "VirtuSpace — 2D Metaverse 🌐",
+      des: "A real-time 2D metaverse where users explore, interact and collaborate in pixel-art spaces like classrooms, offices and event halls. Includes multiplayer avatars over WebSockets and a drag-and-drop map editor, built as a Turborepo monorepo with Prisma.",
+      img: "/p5.png",
+      iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
+      link: "https://metaverse-web-orpin.vercel.app",
     },
   ];
-  
+
+  // Every other project, shown in the compact "All projects" grid.
+  // Private repos have no `github` link so visitors never hit a 404.
+  export const allProjects = [
+    {
+      title: "Manas AI",
+      des: "Sovereign on-premise agentic AI workbench for confidential industrial work. Runs fully offline with local models, live tool-call traces and an audit chain. Built for SIH 2026.",
+      tags: ["Python", "Agents", "Local LLMs"],
+    },
+    {
+      title: "Veronica",
+      des: "macOS voice assistant with wake word, local speech (faster-whisper + Kokoro) and swappable CLI brains like Claude, Codex and Copilot.",
+      tags: ["Python", "Speech", "AI"],
+    },
+    {
+      title: "School ERP Dashboard",
+      des: "Full school management dashboard: students, classes, attendance, fees with Razorpay, PDF reports and role-based auth.",
+      tags: ["Next.js", "Prisma", "Postgres", "Clerk"],
+      live: "https://erp-one-ebon.vercel.app",
+    },
+    {
+      title: "LandGuard AI",
+      des: "Industrial land monitoring and compliance system for government officials with GIS tracking, risk assessment and financial oversight.",
+      tags: ["React", "Leaflet", "Fastify", "Prisma"],
+      github: "https://github.com/Mnkubusb/landguard-ai",
+    },
+    {
+      title: "AuraFit AI Coach",
+      des: "AI fitness tracker that uses your camera to count reps and give real-time form feedback via the Gemini Live API.",
+      tags: ["React", "Gemini", "TypeScript"],
+      github: "https://github.com/Mnkubusb/auraFit",
+    },
+    {
+      title: "Campus Share",
+      des: "AI-powered peer-to-peer marketplace for college students to buy, sell, trade or give away items within their campus.",
+      tags: ["Next.js", "Genkit", "Tailwind"],
+      github: "https://github.com/Mnkubusb/Campus-Share",
+      live: "https://campus-share-bppy.vercel.app",
+    },
+    {
+      title: "Heal Buddy (Nivaran)",
+      des: "AI-powered mental wellness companion with conversational screening, a resource hub and peer support.",
+      tags: ["Next.js", "Genkit", "Tailwind"],
+      github: "https://github.com/Mnkubusb/Nivaran",
+      live: "https://healbuddy-sage.vercel.app",
+    },
+    {
+      title: "Investigator Insights",
+      des: "Crypto OSINT investigator dashboard for tracing and analysing on-chain activity.",
+      tags: ["Next.js", "Genkit", "TypeScript"],
+      live: "https://crypto-osint.vercel.app",
+    },
+    {
+      title: "Pictogram",
+      des: "Social media platform with real-time chat, notifications and post sharing.",
+      tags: ["React", "Firebase", "Tailwind"],
+    },
+    {
+      title: "Ascii Yourself",
+      des: "Realtime webcam-to-ASCII art app with snapshots and optional Gemini image analysis.",
+      tags: ["React", "Canvas", "Gemini"],
+      live: "https://ascii-yourself-omega.vercel.app",
+    },
+    {
+      title: "AI Voice Detection API",
+      des: "REST API that detects AI-generated vs human voice across Tamil, English, Hindi, Malayalam and Telugu.",
+      tags: ["FastAPI", "PyTorch", "Librosa", "Docker"],
+      github: "https://github.com/Mnkubusb/voice-detection-api",
+    },
+    {
+      title: "Eye For Blind",
+      des: "Smart-glasses navigation system giving visually impaired users real-time, conversational, safety-first guidance.",
+      tags: ["Python", "Computer Vision", "IoT"],
+      github: "https://github.com/Mnkubusb/Eye-For-Blind",
+    },
+    {
+      title: "Kaushalam 2026",
+      des: "Official site for GEC Bilaspur's annual tech & cultural fest with 3D visuals, registrations, schedules and gallery.",
+      tags: ["Next.js", "Three.js", "Framer Motion", "Firebase"],
+      github: "https://github.com/Mnkubusb/kausalam2k26",
+      live: "https://kausalam2k26.vercel.app",
+    },
+    {
+      title: "Hackovation 2.0",
+      des: "Official hackathon website of GEC Bilaspur — challenge tracks, schedule and registration.",
+      tags: ["React", "Vite", "Tailwind"],
+      live: "https://hackovation20.vercel.app",
+    },
+    {
+      title: "Cloud Study Jams Leaderboard",
+      des: "Leaderboard tracking Google Cloud Study Jams participants, skill badges and arcade completions. Deployed on Cloud Run.",
+      tags: ["Next.js", "GCP", "Tailwind"],
+      github: "https://github.com/Mnkubusb/cloud-jam",
+      live: "https://googlecloudjamleaderboard.vercel.app",
+    },
+    {
+      title: "Online Chess",
+      des: "Multiplayer chess game with a WebSocket backend and move validation using chess.js.",
+      tags: ["React", "Node.js", "WebSockets"],
+      github: "https://github.com/Mnkubusb/Chess",
+    },
+    {
+      title: "unRiyal Sentiment",
+      des: "Sentiment analysis web app running transformer models serverless with Transformers.js.",
+      tags: ["Node.js", "Transformers.js", "Vercel"],
+      github: "https://github.com/Mnkubusb/unRialSentiment",
+      live: "https://un-rial-sentiment.vercel.app",
+    },
+    {
+      title: "Bits N Bytes 2K24",
+      des: "Event website for the Bits N Bytes 2024 tech event with animated sections.",
+      tags: ["Next.js", "Framer Motion"],
+      live: "https://bitsnbytes.vercel.app",
+    },
+    {
+      title: "Spotify Clone",
+      des: "Pixel-accurate Spotify web player clone.",
+      tags: ["HTML", "CSS", "JavaScript"],
+      live: "https://spotify-sigma-olive.vercel.app",
+    },
+  ];
+
   export const testimonials = [
     {
       quote:

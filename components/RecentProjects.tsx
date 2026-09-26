@@ -1,6 +1,6 @@
 "use client"
-import { projects } from '@/data'
-import { FaLocationArrow } from 'react-icons/fa'
+import { allProjects, projects } from '@/data'
+import { FaGithub, FaLocationArrow } from 'react-icons/fa'
 import { PinContainer } from './ui/3dpin'
 
 const RecentProjects = () => {
@@ -46,6 +46,44 @@ const RecentProjects = () => {
                             </div>
                         </div>
                     </PinContainer>
+                </div>
+            ))}
+        </div>
+
+        <h2 className='heading mt-20 !text-3xl md:!text-4xl'>
+            All <span className='text-purple'>projects</span>
+        </h2>
+        <div className='grid gap-6 mt-10 sm:grid-cols-2 lg:grid-cols-3'>
+            {allProjects.map(({ title , des , tags , github , live }) => (
+                <div key={title} className='flex flex-col rounded-2xl border border-white/[0.1] bg-black-200 p-6 transition-colors hover:border-purple/50'>
+                    <h3 className='font-bold text-lg'>
+                        {title}
+                    </h3>
+                    <p className='mt-2 text-sm text-white-200 flex-1'>
+                        {des}
+                    </p>
+                    <div className='flex flex-wrap gap-2 mt-4'>
+                        {tags.map((tag) => (
+                            <span key={tag} className='rounded-full border border-white/[0.15] px-3 py-1 text-xs text-white-100'>
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
+                    <div className='flex gap-5 mt-5 text-sm text-purple'>
+                        {github && (
+                            <a href={github} target='_blank' rel='noopener noreferrer' className='flex items-center gap-2 hover:underline'>
+                                <FaGithub /> Code
+                            </a>
+                        )}
+                        {live && (
+                            <a href={live} target='_blank' rel='noopener noreferrer' className='flex items-center gap-2 hover:underline'>
+                                <FaLocationArrow /> Live
+                            </a>
+                        )}
+                        {!github && !live && (
+                            <span className='text-white-200'>Private project</span>
+                        )}
+                    </div>
                 </div>
             ))}
         </div>
