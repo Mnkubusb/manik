@@ -168,13 +168,6 @@ export const navItems = [
       github: "https://github.com/Mnkubusb/kausalam2k26",
       live: "https://kausalam2k26.vercel.app",
     },
-    {
-      title: "Cloud Study Jams Leaderboard",
-      des: "Leaderboard tracking Google Cloud Study Jams participants, skill badges and arcade completions. Deployed on Cloud Run.",
-      tags: ["Next.js", "GCP", "Tailwind"],
-      github: "https://github.com/Mnkubusb/cloud-jam",
-      live: "https://googlecloudjamleaderboard.vercel.app",
-    },
   ];
 
   export const testimonials = [
