@@ -34,6 +34,9 @@ const Safari = () => {
           My Developer Blog
         </h2>
         <div className="space-y-8">
+            {blogPosts.length === 0 && (
+              <p className="text-gray-500">No posts yet. Check back soon.</p>
+            )}
             {blogPosts.map(({id , image ,title , date, link}) => (
               <div key={id} className="blog-post">
                 <div className="col-span-2">

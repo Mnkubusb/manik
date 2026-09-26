@@ -75,30 +75,16 @@ const dockApps = [
     },
 ];
 
-const blogPosts = [
-    {
-        id: 1,
-        date: "Sep 2, 2025",
-        title:
-            "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
-        image: "/images/blog1.png",
-        link: "https://jsmastery.com/blog/typescript-explained-what-it-is-why-it-matters-and-how-to-master-it",
-    },
-    {
-        id: 2,
-        date: "Aug 28, 2025",
-        title: "The Ultimate Guide to Mastering Three.js for 3D Development",
-        image: "/images/blog2.png",
-        link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-three-js-for-3d-development",
-    },
-    {
-        id: 3,
-        date: "Aug 15, 2025",
-        title: "The Ultimate Guide to Mastering GSAP Animations",
-        image: "/images/blog3.png",
-        link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-gsap-animations",
-    },
-];
+type BlogPost = {
+    id: number;
+    date: string;
+    title: string;
+    image: string;
+    link: string;
+};
+
+// Add posts here as { id, date, title, image, link }.
+const blogPosts: BlogPost[] = [];
 
 const techStack = [
     {
@@ -133,28 +119,28 @@ const socials = [
         text: "Github",
         icon: "/icons/github.svg",
         bg: "#f4656b",
-        link: "https://github.com/JavaScript-Mastery-Pro",
+        link: "https://github.com/Mnkubusb",
     },
     {
         id: 2,
-        text: "Platform",
-        icon: "/icons/atom.svg",
-        bg: "#4bcb63",
-        link: "https://jsmastery.com/",
-    },
-    {
-        id: 3,
-        text: "Twitter/X",
-        icon: "/icons/twitter.svg",
-        bg: "#ff866b",
-        link: "https://x.com/jsmasterypro",
-    },
-    {
-        id: 4,
         text: "LinkedIn",
         icon: "/icons/linkedin.svg",
         bg: "#05b6f6",
-        link: "https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all",
+        link: "https://www.linkedin.com/in/manik-chand-sahu/",
+    },
+    {
+        id: 3,
+        text: "Instagram",
+        icon: "/icons/instagram.svg",
+        bg: "#e4405f",
+        link: "https://www.instagram.com/manik_chand_sahu/",
+    },
+    {
+        id: 4,
+        text: "Email",
+        icon: "/icons/mail.svg",
+        bg: "#4bcb63",
+        link: "mailto:manikmnr315@gmail.com",
     },
 ];
 
@@ -306,15 +292,6 @@ const PROJECTS: Project[] = [
         github: "https://github.com/Mnkubusb/landguard-ai",
     },
     {
-        name: "AuraFit AI Coach",
-        slug: "aurafit",
-        description: [
-            "AI fitness tracker that uses your camera to count reps and give real-time form feedback.",
-            "Powered by the Gemini Live API.",
-        ],
-        github: "https://github.com/Mnkubusb/auraFit",
-    },
-    {
         name: "Campus Share",
         slug: "campus-share",
         description: [
@@ -342,14 +319,6 @@ const PROJECTS: Project[] = [
         live: "https://crypto-osint.vercel.app",
     },
     {
-        name: "Pictogram",
-        slug: "pictogram",
-        description: [
-            "Social media platform with real-time chat, notifications and post sharing.",
-            "React, Firebase and Tailwind.",
-        ],
-    },
-    {
         name: "Ascii Yourself",
         slug: "ascii-yourself",
         description: [
@@ -367,14 +336,6 @@ const PROJECTS: Project[] = [
         github: "https://github.com/Mnkubusb/voice-detection-api",
     },
     {
-        name: "Eye For Blind",
-        slug: "eye-for-blind",
-        description: [
-            "Smart-glasses navigation system giving visually impaired users real-time, safety-first guidance.",
-        ],
-        github: "https://github.com/Mnkubusb/Eye-For-Blind",
-    },
-    {
         name: "Kaushalam 2026",
         slug: "kaushalam-2026",
         description: [
@@ -385,14 +346,6 @@ const PROJECTS: Project[] = [
         github: "https://github.com/Mnkubusb/kausalam2k26",
     },
     {
-        name: "Hackovation 2.0",
-        slug: "hackovation",
-        description: [
-            "Official hackathon website of GEC Bilaspur with challenge tracks, schedule and registration.",
-        ],
-        live: "https://hackovation20.vercel.app",
-    },
-    {
         name: "Cloud Jam Leaderboard",
         slug: "cloud-jam",
         description: [
@@ -401,39 +354,6 @@ const PROJECTS: Project[] = [
         ],
         live: "https://googlecloudjamleaderboard.vercel.app",
         github: "https://github.com/Mnkubusb/cloud-jam",
-    },
-    {
-        name: "Online Chess",
-        slug: "chess",
-        description: [
-            "Multiplayer chess with a WebSocket backend and move validation via chess.js.",
-        ],
-        github: "https://github.com/Mnkubusb/Chess",
-    },
-    {
-        name: "unRiyal Sentiment",
-        slug: "unriyal-sentiment",
-        description: [
-            "Sentiment analysis web app running transformer models serverless with Transformers.js.",
-        ],
-        live: "https://un-rial-sentiment.vercel.app",
-        github: "https://github.com/Mnkubusb/unRialSentiment",
-    },
-    {
-        name: "Bits N Bytes 2K24",
-        slug: "bitsnbytes",
-        description: [
-            "Event website for the Bits N Bytes 2024 tech event.",
-        ],
-        live: "https://bitsnbytes.vercel.app",
-    },
-    {
-        name: "Spotify Clone",
-        slug: "spotify-clone",
-        description: [
-            "Pixel-accurate Spotify web player clone in HTML, CSS and JavaScript.",
-        ],
-        live: "https://spotify-sigma-olive.vercel.app",
     },
 ];
 
@@ -501,45 +421,27 @@ const ABOUT_LOCATION = {
     children: [
         {
             id: 1,
-            name: "me.png",
+            name: "me.jpg",
             icon: "/images/photos.png",
             kind: "file",
             fileType: "img",
             position: "top-10 left-5",
-            imageUrl: "/images/adrian.jpg",
+            imageUrl: "/images/manik.jpg",
         },
         {
             id: 2,
-            name: "casual-me.png",
-            icon: "/images/photos.png",
-            kind: "file",
-            fileType: "img",
-            position: "top-28 right-72",
-            imageUrl: "/images/adrian-2.jpg",
-        },
-        {
-            id: 3,
-            name: "conference-me.png",
-            icon: "/images/photos.png",
-            kind: "file",
-            fileType: "img",
-            position: "top-52 left-80",
-            imageUrl: "/images/adrian-3.jpeg",
-        },
-        {
-            id: 4,
             name: "about-me.txt",
             icon: "/images/txt.png",
             kind: "file",
             fileType: "txt",
-            position: "top-60 left-5",
+            position: "top-10 left-60",
             subtitle: "Meet the Developer Behind the Code",
-            image: "/images/adrian.jpg",
+            image: "/images/manik.jpg",
             description: [
-                "Hey! I’m Adrian 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
-                "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
-                "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
-                "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
+                "Hey! I'm Manik Chand Sahu 👋, a full stack web and app developer from Bilaspur, Chhattisgarh, currently working as an SDE 1 at Rival.io.",
+                "I build with Next.js, React, TypeScript and Node, and lately a lot of AI: agents, local LLMs and voice assistants.",
+                "I love shipping things people actually use, from real-time collaborative apps to hackathon and college fest websites.",
+                "Outside of code you'll find me watching anime, listening to music or gaming.",
             ],
         },
     ],
