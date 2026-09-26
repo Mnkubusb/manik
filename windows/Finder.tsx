@@ -50,7 +50,7 @@ const Finder = () => {
           {renderList("Favorites", Object.values(locations))}
           {renderList("Work", locations.work.children)}
         </div>
-        <ul className='content'>
+        <ul className={clsx('content', activeLocation.type === 'work' && 'grid-view')}>
           {activeLocation?.children?.map((item) => (
             <li key={item.id} className={item.position} onClick={() => openItem(item)}>
               <img src={item.icon} alt={item.name} />

@@ -1,3 +1,4 @@
+import type { FolderItem } from "@/types/location";
 const navLinks = [
     {
         id: 1,
@@ -215,172 +216,280 @@ export {
     gallery,
 };
 
+type Project = {
+    name: string;
+    slug: string;
+    description: string[];
+    live?: string;
+    github?: string;
+    image?: string;
+};
+
+// Private repos have no `github` link so visitors never hit a 404.
+const PROJECTS: Project[] = [
+    {
+        name: "Flow Docs",
+        slug: "flow-docs",
+        description: [
+            "Real-time collaborative document editor where multiple people edit the same doc at once, synced across devices.",
+            "Built with Next.js, TipTap, Liveblocks and Convex.",
+        ],
+        live: "https://docs-zeta-eight-56.vercel.app",
+        github: "https://github.com/Mnkubusb/docs",
+        image: "/images/project-flow-docs.svg",
+    },
+    {
+        name: "College Connections",
+        slug: "college-connections",
+        description: [
+            "Helps college students find and connect with each other through profiles and social links.",
+            "Also a shared space for academic notes across every semester. Built with Next.js, Prisma and Tailwind.",
+        ],
+        live: "https://college-connection.vercel.app",
+        github: "https://github.com/Mnkubusb/college_connection",
+        image: "/images/project-college-connections.svg",
+    },
+    {
+        name: "Zentry Clone",
+        slug: "zentry-clone",
+        description: [
+            "Pixel-perfect clone of the Awwwards-winning Zentry gaming landing page.",
+            "Recreates its scroll animations and immersive UI with React, GSAP and Tailwind.",
+        ],
+        live: "https://awwwards-website-phi.vercel.app",
+        github: "https://github.com/Mnkubusb/awwwards_website",
+        image: "/images/project-zentry.svg",
+    },
+    {
+        name: "VirtuSpace",
+        slug: "virtuspace",
+        description: [
+            "Real-time 2D metaverse: walk, sit and chat in pixel-art offices, classrooms and event halls.",
+            "Multiplayer avatars over WebSockets plus a drag-and-drop map editor, in a Turborepo monorepo with Prisma.",
+        ],
+        live: "https://metaverse-web-orpin.vercel.app",
+        github: "https://github.com/Mnkubusb/metaverse",
+        image: "/images/project-virtuspace.png",
+    },
+    {
+        name: "Manas AI",
+        slug: "manas-ai",
+        description: [
+            "Sovereign on-premise agentic AI workbench for confidential industrial work, built for SIH 2026.",
+            "Runs fully offline on local models with live tool-call traces and a tamper-evident audit chain.",
+        ],
+    },
+    {
+        name: "Veronica",
+        slug: "veronica",
+        description: [
+            "macOS voice assistant with a custom wake word and fully local speech (faster-whisper + Kokoro).",
+            "Swappable brains: Claude, Codex, Copilot and more through their own CLIs.",
+        ],
+    },
+    {
+        name: "School ERP",
+        slug: "school-erp",
+        description: [
+            "School management dashboard covering students, classes, attendance, fees and PDF reports.",
+            "Next.js, Prisma, Postgres, Clerk auth and Razorpay payments.",
+        ],
+        live: "https://erp-one-ebon.vercel.app",
+    },
+    {
+        name: "LandGuard AI",
+        slug: "landguard-ai",
+        description: [
+            "Industrial land monitoring and compliance system for government officials.",
+            "GIS tracking, risk assessment and financial oversight. React + Leaflet frontend, Fastify + Prisma backend.",
+        ],
+        github: "https://github.com/Mnkubusb/landguard-ai",
+    },
+    {
+        name: "AuraFit AI Coach",
+        slug: "aurafit",
+        description: [
+            "AI fitness tracker that uses your camera to count reps and give real-time form feedback.",
+            "Powered by the Gemini Live API.",
+        ],
+        github: "https://github.com/Mnkubusb/auraFit",
+    },
+    {
+        name: "Campus Share",
+        slug: "campus-share",
+        description: [
+            "AI-powered peer-to-peer marketplace for students to buy, sell, trade or give away items on campus.",
+            "Next.js, Genkit and Tailwind.",
+        ],
+        live: "https://campus-share-bppy.vercel.app",
+        github: "https://github.com/Mnkubusb/Campus-Share",
+    },
+    {
+        name: "Heal Buddy",
+        slug: "heal-buddy",
+        description: [
+            "AI-powered mental wellness companion with conversational screening, a resource hub and peer support.",
+        ],
+        live: "https://healbuddy-sage.vercel.app",
+        github: "https://github.com/Mnkubusb/Nivaran",
+    },
+    {
+        name: "Investigator Insights",
+        slug: "investigator-insights",
+        description: [
+            "Crypto OSINT investigator dashboard for tracing and analysing on-chain activity.",
+        ],
+        live: "https://crypto-osint.vercel.app",
+    },
+    {
+        name: "Pictogram",
+        slug: "pictogram",
+        description: [
+            "Social media platform with real-time chat, notifications and post sharing.",
+            "React, Firebase and Tailwind.",
+        ],
+    },
+    {
+        name: "Ascii Yourself",
+        slug: "ascii-yourself",
+        description: [
+            "Realtime webcam-to-ASCII art with snapshots and optional Gemini image analysis.",
+        ],
+        live: "https://ascii-yourself-omega.vercel.app",
+    },
+    {
+        name: "AI Voice Detection API",
+        slug: "voice-detection-api",
+        description: [
+            "REST API that detects AI-generated vs human voice in Tamil, English, Hindi, Malayalam and Telugu.",
+            "FastAPI, PyTorch and Librosa, shipped with Docker.",
+        ],
+        github: "https://github.com/Mnkubusb/voice-detection-api",
+    },
+    {
+        name: "Eye For Blind",
+        slug: "eye-for-blind",
+        description: [
+            "Smart-glasses navigation system giving visually impaired users real-time, safety-first guidance.",
+        ],
+        github: "https://github.com/Mnkubusb/Eye-For-Blind",
+    },
+    {
+        name: "Kaushalam 2026",
+        slug: "kaushalam-2026",
+        description: [
+            "Official site for GEC Bilaspur's annual tech & cultural fest: events, registrations, schedule and gallery.",
+            "Next.js, Three.js, Framer Motion and Firebase.",
+        ],
+        live: "https://kausalam2k26.vercel.app",
+        github: "https://github.com/Mnkubusb/kausalam2k26",
+    },
+    {
+        name: "Hackovation 2.0",
+        slug: "hackovation",
+        description: [
+            "Official hackathon website of GEC Bilaspur with challenge tracks, schedule and registration.",
+        ],
+        live: "https://hackovation20.vercel.app",
+    },
+    {
+        name: "Cloud Jam Leaderboard",
+        slug: "cloud-jam",
+        description: [
+            "Leaderboard tracking Google Cloud Study Jams participants, skill badges and arcade completions.",
+            "Next.js on Cloud Run with data from Cloud Storage.",
+        ],
+        live: "https://googlecloudjamleaderboard.vercel.app",
+        github: "https://github.com/Mnkubusb/cloud-jam",
+    },
+    {
+        name: "Online Chess",
+        slug: "chess",
+        description: [
+            "Multiplayer chess with a WebSocket backend and move validation via chess.js.",
+        ],
+        github: "https://github.com/Mnkubusb/Chess",
+    },
+    {
+        name: "unRiyal Sentiment",
+        slug: "unriyal-sentiment",
+        description: [
+            "Sentiment analysis web app running transformer models serverless with Transformers.js.",
+        ],
+        live: "https://un-rial-sentiment.vercel.app",
+        github: "https://github.com/Mnkubusb/unRialSentiment",
+    },
+    {
+        name: "Bits N Bytes 2K24",
+        slug: "bitsnbytes",
+        description: [
+            "Event website for the Bits N Bytes 2024 tech event.",
+        ],
+        live: "https://bitsnbytes.vercel.app",
+    },
+    {
+        name: "Spotify Clone",
+        slug: "spotify-clone",
+        description: [
+            "Pixel-accurate Spotify web player clone in HTML, CSS and JavaScript.",
+        ],
+        live: "https://spotify-sigma-olive.vercel.app",
+    },
+];
+
+// Where each file sits inside an open project folder, in order.
+const FILE_POSITIONS = ["top-10 left-5", "top-10 right-10", "top-52 left-5", "top-52 right-10"];
+
+const projectFolder = (project: Project, index: number): FolderItem => {
+    const files = [
+        {
+            name: `${project.name}.txt`,
+            icon: "/images/txt.png",
+            kind: "file",
+            fileType: "txt",
+            image: project.image,
+            description: project.description,
+        },
+        project.live && {
+            name: `${project.slug}.live`,
+            icon: "/images/safari.png",
+            kind: "file",
+            fileType: "url",
+            href: project.live,
+        },
+        project.github && {
+            name: "GitHub",
+            icon: "/icons/github-dark.svg",
+            kind: "file",
+            fileType: "url",
+            href: project.github,
+        },
+        project.image && {
+            name: `${project.slug}.${project.image.split(".").pop()}`,
+            icon: "/images/photos.png",
+            kind: "file",
+            fileType: "img",
+            imageUrl: project.image,
+        },
+    ].filter((file) => !!file);
+
+    return {
+        // Location ids 1-4 are taken by the sidebar favorites.
+        id: index + 5,
+        name: project.name,
+        icon: "/images/folder.png",
+        kind: "folder",
+        children: files.map((file, i) => ({ id: i + 1, position: FILE_POSITIONS[i], ...file })),
+    };
+};
+
 const WORK_LOCATION = {
     id: 1,
     type: "work",
     name: "Work",
     icon: "/icons/work.svg",
     kind: "folder",
-    children: [
-        // ▶ Project 1
-        {
-            id: 5,
-            name: "Nike Ecommerce Website Application",
-            icon: "/images/folder.png",
-            kind: "folder",
-            position: "top-10 left-5", // icon position inside Finder
-            windowPosition: "top-[5vh] left-5", // optional: Finder window position
-            children: [
-                {
-                    id: 1,
-                    name: "Nike Project.txt",
-                    icon: "/images/txt.png",
-                    kind: "file",
-                    fileType: "txt",
-                    position: "top-5 left-10",
-                    description: [
-                        "The Nike eCommerce website is a sleek and modern platform designed for shopping the latest Nike collections.",
-                        "Instead of a simple online store, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
-                        "Think of it like walking into a flagship Nike store—but right from your phone or laptop.",
-                        "It's built with Next.js and Tailwind, ensuring fast performance, responsive design, and a clean, premium look.",
-                    ],
-                },
-                {
-                    id: 2,
-                    name: "nike.com",
-                    icon: "/images/safari.png",
-                    kind: "file",
-                    fileType: "url",
-                    href: "https://youtu.be/fZdTYswuZjU?si=Awjl-pIst9e09_UU",
-                    position: "top-10 right-20",
-                },
-                {
-                    id: 4,
-                    name: "nike.png",
-                    icon: "/images/image.png",
-                    kind: "file",
-                    fileType: "img",
-                    position: "top-52 right-80",
-                    imageUrl: "/images/project-1.png",
-                },
-                {
-                    id: 5,
-                    name: "Design.fig",
-                    icon: "/images/plain.png",
-                    kind: "file",
-                    fileType: "fig",
-                    href: "https://google.com",
-                    position: "top-60 right-20",
-                },
-            ],
-        },
-
-        // ▶ Project 2
-        {
-            id: 6,
-            name: "AI Resume Analyzer",
-            icon: "/images/folder.png",
-            kind: "folder",
-            position: "top-52 right-80",
-            windowPosition: "top-[20vh] left-7",
-            children: [
-                {
-                    id: 1,
-                    name: "AI Resume Analyzer Project.txt",
-                    icon: "/images/txt.png",
-                    kind: "file",
-                    fileType: "txt",
-                    position: "top-5 right-10",
-                    description: [
-                        "AI Resume Analyzer is a smart tool that helps you perfect your resume with instant feedback.",
-                        "Instead of guessing what recruiters want, you get AI-powered insights on keywords, formatting, and overall impact.",
-                        "Think of it like having a career coach—pointing out strengths, fixing weaknesses, and boosting your chances of landing interviews.",
-                        "It's built with Next.js and Tailwind, so it runs fast, looks professional, and works seamlessly on any device.",
-                    ],
-                },
-                {
-                    id: 2,
-                    name: "ai-resume-analyzer.com",
-                    icon: "/images/safari.png",
-                    kind: "file",
-                    fileType: "url",
-                    href: "https://youtu.be/iYOz165wGkQ?si=R1hs8Legl200m0Cl",
-                    position: "top-20 left-20",
-                },
-                {
-                    id: 4,
-                    name: "ai-resume-analyzer.png",
-                    icon: "/images/image.png",
-                    kind: "file",
-                    fileType: "img",
-                    position: "top-52 left-80",
-                    imageUrl: "/images/project-2.png",
-                },
-                {
-                    id: 5,
-                    name: "Design.fig",
-                    icon: "/images/plain.png",
-                    kind: "file",
-                    fileType: "fig",
-                    href: "https://google.com",
-                    position: "top-60 left-5",
-                },
-            ],
-        },
-
-        // ▶ Project 3
-        {
-            id: 7,
-            name: "Food Delivery App",
-            icon: "/images/folder.png",
-            kind: "folder",
-            position: "top-10 left-80",
-            windowPosition: "top-[33vh] left-7",
-            children: [
-                {
-                    id: 1,
-                    name: "Food Delivery App Project.txt",
-                    icon: "/images/txt.png",
-                    kind: "file",
-                    fileType: "txt",
-                    position: "top-5 left-10",
-                    description: [
-                        "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
-                        "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
-                        "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
-                        "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
-                    ],
-                },
-                {
-                    id: 2,
-                    name: "food-delivery-app.com",
-                    icon: "/images/safari.png",
-                    kind: "file",
-                    fileType: "url",
-                    href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
-                    position: "top-10 right-20",
-                },
-                {
-                    id: 4,
-                    name: "food-delivery-app.png",
-                    icon: "/images/image.png",
-                    kind: "file",
-                    fileType: "img",
-                    position: "top-52 right-80",
-                    imageUrl: "/images/project-3.png",
-                },
-                {
-                    id: 5,
-                    name: "Design.fig",
-                    icon: "/images/plain.png",
-                    kind: "file",
-                    fileType: "fig",
-                    href: "https://google.com",
-                    position: "top-60 right-20",
-                },
-            ],
-        },
-    ],
+    children: PROJECTS.map(projectFolder),
 };
 
 const ABOUT_LOCATION = {
@@ -393,7 +502,7 @@ const ABOUT_LOCATION = {
         {
             id: 1,
             name: "me.png",
-            icon: "/images/image.png",
+            icon: "/images/photos.png",
             kind: "file",
             fileType: "img",
             position: "top-10 left-5",
@@ -402,7 +511,7 @@ const ABOUT_LOCATION = {
         {
             id: 2,
             name: "casual-me.png",
-            icon: "/images/image.png",
+            icon: "/images/photos.png",
             kind: "file",
             fileType: "img",
             position: "top-28 right-72",
@@ -411,7 +520,7 @@ const ABOUT_LOCATION = {
         {
             id: 3,
             name: "conference-me.png",
-            icon: "/images/image.png",
+            icon: "/images/photos.png",
             kind: "file",
             fileType: "img",
             position: "top-52 left-80",

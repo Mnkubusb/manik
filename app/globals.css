@@ -444,7 +444,7 @@ body {
     @apply absolute w-3xl left-40 top-20 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl;
 
     .sidebar {
-      @apply w-48 bg-gray-50 dark:bg-[#323232F2] border-r border-gray-200 flex flex-col p-5 space-y-3;
+      @apply w-48 bg-gray-50 dark:bg-[#323232F2] border-r border-gray-200 flex flex-col p-5 space-y-3 max-h-[70vh] overflow-y-auto;
 
       h3 {
         @apply text-xs font-medium text-gray-400 dark:text-white mb-1;
@@ -479,6 +479,19 @@ body {
 
         p {
           @apply text-sm text-center font-medium w-40;
+        }
+      }
+
+      img[src$="github-dark.svg"] {
+        @apply dark:invert;
+      }
+
+      /* Work holds many project folders, so lay them out in a scrolling grid. */
+      &.grid-view {
+        @apply grid grid-cols-3 gap-y-8 content-start max-h-[70vh] overflow-y-auto;
+
+        li {
+          @apply static cursor-pointer;
         }
       }
     }
