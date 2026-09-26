@@ -130,12 +130,6 @@ export const navItems = [
       github: "https://github.com/Mnkubusb/landguard-ai",
     },
     {
-      title: "AuraFit AI Coach",
-      des: "AI fitness tracker that uses your camera to count reps and give real-time form feedback via the Gemini Live API.",
-      tags: ["React", "Gemini", "TypeScript"],
-      github: "https://github.com/Mnkubusb/auraFit",
-    },
-    {
       title: "Campus Share",
       des: "AI-powered peer-to-peer marketplace for college students to buy, sell, trade or give away items within their campus.",
       tags: ["Next.js", "Genkit", "Tailwind"],
@@ -156,11 +150,6 @@ export const navItems = [
       live: "https://crypto-osint.vercel.app",
     },
     {
-      title: "Pictogram",
-      des: "Social media platform with real-time chat, notifications and post sharing.",
-      tags: ["React", "Firebase", "Tailwind"],
-    },
-    {
       title: "Ascii Yourself",
       des: "Realtime webcam-to-ASCII art app with snapshots and optional Gemini image analysis.",
       tags: ["React", "Canvas", "Gemini"],
@@ -173,12 +162,6 @@ export const navItems = [
       github: "https://github.com/Mnkubusb/voice-detection-api",
     },
     {
-      title: "Eye For Blind",
-      des: "Smart-glasses navigation system giving visually impaired users real-time, conversational, safety-first guidance.",
-      tags: ["Python", "Computer Vision", "IoT"],
-      github: "https://github.com/Mnkubusb/Eye-For-Blind",
-    },
-    {
       title: "Kaushalam 2026",
       des: "Official site for GEC Bilaspur's annual tech & cultural fest with 3D visuals, registrations, schedules and gallery.",
       tags: ["Next.js", "Three.js", "Framer Motion", "Firebase"],
@@ -186,42 +169,11 @@ export const navItems = [
       live: "https://kausalam2k26.vercel.app",
     },
     {
-      title: "Hackovation 2.0",
-      des: "Official hackathon website of GEC Bilaspur — challenge tracks, schedule and registration.",
-      tags: ["React", "Vite", "Tailwind"],
-      live: "https://hackovation20.vercel.app",
-    },
-    {
       title: "Cloud Study Jams Leaderboard",
       des: "Leaderboard tracking Google Cloud Study Jams participants, skill badges and arcade completions. Deployed on Cloud Run.",
       tags: ["Next.js", "GCP", "Tailwind"],
       github: "https://github.com/Mnkubusb/cloud-jam",
       live: "https://googlecloudjamleaderboard.vercel.app",
-    },
-    {
-      title: "Online Chess",
-      des: "Multiplayer chess game with a WebSocket backend and move validation using chess.js.",
-      tags: ["React", "Node.js", "WebSockets"],
-      github: "https://github.com/Mnkubusb/Chess",
-    },
-    {
-      title: "unRiyal Sentiment",
-      des: "Sentiment analysis web app running transformer models serverless with Transformers.js.",
-      tags: ["Node.js", "Transformers.js", "Vercel"],
-      github: "https://github.com/Mnkubusb/unRialSentiment",
-      live: "https://un-rial-sentiment.vercel.app",
-    },
-    {
-      title: "Bits N Bytes 2K24",
-      des: "Event website for the Bits N Bytes 2024 tech event with animated sections.",
-      tags: ["Next.js", "Framer Motion"],
-      live: "https://bitsnbytes.vercel.app",
-    },
-    {
-      title: "Spotify Clone",
-      des: "Pixel-accurate Spotify web player clone.",
-      tags: ["HTML", "CSS", "JavaScript"],
-      live: "https://spotify-sigma-olive.vercel.app",
     },
   ];
 
