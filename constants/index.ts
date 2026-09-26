@@ -75,16 +75,57 @@ const dockApps = [
     },
 ];
 
-type BlogPost = {
-    id: number;
-    date: string;
-    title: string;
-    image: string;
-    link: string;
-};
-
-// Add posts here as { id, date, title, image, link }.
-const blogPosts: BlogPost[] = [];
+// Live sites shown as tabs in the Safari window.
+const liveSites = [
+    {
+        name: "VirtuSpace",
+        url: "https://metaverse-web-orpin.vercel.app",
+        image: "/images/project-virtuspace.png",
+        pitch: "A real-time 2D metaverse: walk, sit and chat with others in pixel-art offices and classrooms.",
+    },
+    {
+        name: "Flow Docs",
+        url: "https://docs-zeta-eight-56.vercel.app",
+        image: "/images/project-flow-docs.svg",
+        pitch: "Google Docs-style editor where many people edit the same document live.",
+    },
+    {
+        name: "College Connections",
+        url: "https://college-connection.vercel.app",
+        image: "/images/project-college-connections.svg",
+        pitch: "Find classmates, connect through their socials and share notes for every semester.",
+    },
+    {
+        name: "Zentry Clone",
+        url: "https://awwwards-website-phi.vercel.app",
+        image: "/images/sites/zentry-clone.jpg",
+        pitch: "Pixel-perfect rebuild of an Awwwards-winning gaming landing page, animations included.",
+    },
+    {
+        name: "Campus Share",
+        url: "https://campus-share-bppy.vercel.app",
+        image: "/images/sites/campus-share.jpg",
+        pitch: "Campus marketplace to buy, sell or give away textbooks, furniture and gadgets, with AI-written listings.",
+    },
+    {
+        name: "Heal Buddy",
+        url: "https://healbuddy-sage.vercel.app",
+        image: "/images/sites/heal-buddy.jpg",
+        pitch: "A safe, confidential AI companion to check in on your mental wellbeing.",
+    },
+    {
+        name: "Kaushalam 2026",
+        url: "https://kausalam2k26.vercel.app",
+        image: "/images/sites/kaushalam-2026.jpg",
+        pitch: "Official site for GEC Bilaspur's tech & cultural fest, with 3D visuals and event passes.",
+    },
+    {
+        name: "Ascii Yourself",
+        url: "https://ascii-yourself-omega.vercel.app",
+        image: "/images/sites/ascii-yourself.jpg",
+        pitch: "Turns your webcam feed into live ASCII art right in the browser.",
+    },
+];
 
 const techStack = [
     {
@@ -195,7 +236,7 @@ export {
     navLinks,
     navIcons,
     dockApps,
-    blogPosts,
+    liveSites,
     techStack,
     socials,
     photosLinks,
@@ -344,16 +385,6 @@ const PROJECTS: Project[] = [
         ],
         live: "https://kausalam2k26.vercel.app",
         github: "https://github.com/Mnkubusb/kausalam2k26",
-    },
-    {
-        name: "Cloud Jam Leaderboard",
-        slug: "cloud-jam",
-        description: [
-            "Leaderboard tracking Google Cloud Study Jams participants, skill badges and arcade completions.",
-            "Next.js on Cloud Run with data from Cloud Storage.",
-        ],
-        live: "https://googlecloudjamleaderboard.vercel.app",
-        github: "https://github.com/Mnkubusb/cloud-jam",
     },
 ];
 
